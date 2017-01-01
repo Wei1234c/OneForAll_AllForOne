@@ -26,5 +26,6 @@ def get_table(stock_id, year = datetime.today().year, month = datetime.today().m
     
     table['個股代號'] = stock_id
     table = table.reindex(columns = ['個股代號', '日期', '成交股數', '成交金額', '開盤價', '最高價', '最低價', '收盤價', '漲跌價差', '成交筆數'])
-    
+    # table = table.reindex(columns = ['stock_id', 'date', 'quantity', 'amount', 'open', 'highest', 'lowest', 'close', 'offset', 'trades'])
+       
     return table.tail(1).values
